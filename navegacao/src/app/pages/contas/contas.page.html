@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>Minhas Contas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="adicionar()"
+              color="primary"
+              expand="block">
+    <ion-icon slot="start"
+              name="person-add-outline"></ion-icon>
+    Adicionar Conta
+  </ion-button>
+
+  <ion-card>
+    <ion-item class="ion-activated">
+      <ion-label>Google</ion-label>
+      <ion-button color="danger"
+                  fill="outline"
+                  slot="end">
+        <ion-icon name="trash-outline"
+                  slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="ion-activated">
+      <ion-label>Mi Conta</ion-label>
+      <ion-button color="danger"
+                  fill="outline"
+                  slot="end">
+        <ion-icon name="trash-outline"
+                  slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="ion-activated">
+      <ion-label>Outlook</ion-label>
+      <ion-button color="danger"
+                  fill="outline"
+                  slot="end">
+        <ion-icon name="trash-outline"
+                  slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <ion-item class="ion-activated">
+      <ion-label>Facebook</ion-label>
+      <ion-button color="danger"
+                  fill="outline"
+                  slot="end">
+        <ion-icon name="trash-outline"
+                  slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+</ion-content>
