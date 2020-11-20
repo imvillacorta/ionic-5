@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +8,32 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor(
+    private alertCtrl: AlertController
+  ) { }
+
+  async confirm() {
+    const alert = await this.alertCtrl.create({
+      header: 'Confirmar!',
+      message: 'Deseja realmente aplicar esta ação ?',
+      buttons: [
+        {
+          text: 'Não',
+          role: 'cancel',
+          handler: (blah) => {
+            console.log('Ação cancelada');
+          }
+        },
+        {
+          text: 'Sim',
+          handler: () => {
+            console.log('Ação aplicada');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
 
 }
